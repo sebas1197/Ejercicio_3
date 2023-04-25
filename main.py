@@ -28,8 +28,13 @@ def opcion3(vector):
 
     print(suma)
 
-def opcion4():
-    print("Se ha seleccionado la opción 4.")
+def opcion4(matriz):
+    suma = 0
+
+    for fila in matriz:
+        for valor in fila:
+            suma += valor
+    print(suma)
 
 def opcion5():
     print("Se ha seleccionado la opción 5.")
@@ -73,7 +78,7 @@ def menu():
     elif opcion == "3":
         opcion3(vector)
     elif opcion == "4":
-        opcion4()
+        opcion4(matriz)
     elif opcion == "5":
         opcion5()
     elif opcion == "6":
