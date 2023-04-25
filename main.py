@@ -55,6 +55,20 @@ def opcion6(matriz):
             if valor % 2 != 0:
                 print(valor)
 
+def opcion7(matriz):
+    filas = len(matriz)
+    columnas = len(matriz[0])
+
+    for i in range(filas):
+        for j in range(columnas):
+            for k in range(filas):
+                for l in range(columnas):
+                    if matriz[i][j] > matriz[k][l]:
+                        matriz[i][j], matriz[k][l] = matriz[k][l], matriz[i][j]
+
+    print(matriz)
+
+
 def menu():
     vector = []
 
@@ -97,7 +111,7 @@ def menu():
     elif opcion == "6":
         opcion6(matriz)
     elif opcion == "7":
-        print("Has seleccionado la opción 7.")
+        opcion7(matriz)
     elif opcion == "8":
         print("Saliendo del programa...")
         exit()
