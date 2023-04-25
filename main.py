@@ -36,8 +36,18 @@ def opcion4(matriz):
             suma += valor
     print(suma)
 
-def opcion5():
-    print("Se ha seleccionado la opción 5.")
+def es_primo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, numero):
+        if numero % i == 0:
+            return False
+    return True
+
+def opcion5(vector):
+    for i, valor in enumerate(vector):
+        if es_primo(valor):
+            print("El número primo", valor, "se encuentra en la posición", i)
 
 def opcion6():
     print("Se ha seleccionado la opción 6.")
@@ -80,7 +90,7 @@ def menu():
     elif opcion == "4":
         opcion4(matriz)
     elif opcion == "5":
-        opcion5()
+        opcion5(vector)
     elif opcion == "6":
         opcion6()
     elif opcion == "7":
