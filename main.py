@@ -1,10 +1,25 @@
 import random
 
-def opcion1():
+def opcion1(vector, matriz):
     print("Se ha seleccionado la opción 1.")
+    print("Vector:")
+    print(vector)
+    print("Matriz:")
+    for fila in matriz:
+        print(fila)        
 
-def opcion2():
-    print("Se ha seleccionado la opción 2.")
+def opcion2(vector):
+
+    for i in range(len(vector)):
+        max_idx = i
+        for j in range(i+1, len(vector)):
+            if vector[j] > vector[max_idx]:
+                max_idx = j
+
+        vector[i], vector[max_idx] = vector[max_idx], vector[i]
+
+    print(vector)
+
 
 def opcion3():
     print("Se ha seleccionado la opción 3.")
@@ -48,9 +63,9 @@ def menu():
     opcion = input("Ingrese el número de opción: ")
 
     if opcion == "1":
-        opcion1()
+        opcion1(vector, matriz)
     elif opcion == "2":
-        opcion2()
+        opcion2(vector)
     elif opcion == "3":
         opcion3()
     elif opcion == "4":
