@@ -1,4 +1,4 @@
-
+import random
 
 def opcion1():
     print("Se ha seleccionado la opción 1.")
@@ -19,6 +19,21 @@ def opcion6():
     print("Se ha seleccionado la opción 6.")
 
 def menu():
+    vector = []
+
+    for i in range(50):
+        valor = random.randint(1, 500)
+        vector.append(valor)
+
+    matriz = []
+
+    for i in range(5):
+        fila = []
+        for j in range(5):
+            valor = random.randint(1, 500)
+            fila.append(valor)
+        matriz.append(fila)
+
 
     print("Seleccione una opción:")
     print("1. Mostrar vector y matriz de datos")
