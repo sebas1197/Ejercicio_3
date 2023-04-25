@@ -49,8 +49,11 @@ def opcion5(vector):
         if es_primo(valor):
             print("El número primo", valor, "se encuentra en la posición", i)
 
-def opcion6():
-    print("Se ha seleccionado la opción 6.")
+def opcion6(matriz):
+    for fila in matriz:
+        for valor in fila:
+            if valor % 2 != 0:
+                print(valor)
 
 def menu():
     vector = []
@@ -92,7 +95,7 @@ def menu():
     elif opcion == "5":
         opcion5(vector)
     elif opcion == "6":
-        opcion6()
+        opcion6(matriz)
     elif opcion == "7":
         print("Has seleccionado la opción 7.")
     elif opcion == "8":
